@@ -1,5 +1,13 @@
+import Hero from "../../components/Hero.jsx";
+
 const Home = () => {
-  return <div></div>;
+  return (
+    <div className="container mx-auto">
+      <div className="flex flex-col justify-center items-center w-full py-20">
+        <Hero />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
