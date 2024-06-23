@@ -36,7 +36,9 @@ const Search = () => {
     fetchItems();
   }, [query]);
 
-  console.log(results);
+  const handleSearch = (e) => {
+    setQuery(e.target.value);
+  };
 
   return (
     <div className="px-6 lg:px-12 py-20">
@@ -46,6 +48,8 @@ const Search = () => {
       <div className="bg-white md:max-w-screen-3xl mx-auto p-4 rounded relative flex items-center">
         <IoIosSearch className="w-5 h-5 mr-2 text-neutral-300" />
         <input
+          value={query}
+          onChange={handleSearch}
           className="outline-none w-full placeholder:text-[#1b2629]"
           name="query"
           type="search"

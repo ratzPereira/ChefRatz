@@ -24,6 +24,16 @@ const getSearchedItems = async (req, res) => {
   }
 };
 
+const getSingleItem = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const item = await Item.findById(id);
+    res.status(200).json(item);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching item" });
+  }
+};
+
 const createItem = async (req, res) => {
   try {
     const newItem = new Item(req.body);
@@ -38,4 +48,5 @@ module.exports = {
   getAllItems,
   getSearchedItems,
   createItem,
+  getSingleItem,
 };
