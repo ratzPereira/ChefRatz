@@ -1,5 +1,6 @@
 import Hero from "../../components/Hero.jsx";
 import CategoryWrapper from "../category/CategoryWrapper.jsx";
+import FeaturedSection from "./FeaturedSection.jsx";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <Hero />
         <CategoryWrapper />
       </div>
+      <FeaturedSection />
     </div>
   );
 };
