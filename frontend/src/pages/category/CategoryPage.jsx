@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CategoryWrapper from "./CategoryWrapper.jsx";
 import axios from "axios";
+import Card from "../../components/Card.jsx";
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -32,22 +33,8 @@ const CategoryPage = () => {
         {category}
       </h1>
       <CategoryWrapper />
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <div className="bg-white md:max-w-screen-3xl mx-auto p-4 rounded relative flex items-center">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-16 h-16 object-cover rounded-full"
-              />
-              <div className="ml-4">
-                <h2 className="font-semibold text-lg">{item.name}</h2>
-                <p className="text-sm text-neutral-300">{item.description}</p>
-              </div>
-            </div>
-          </li>
-        ))}
+      <ul className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {items && items?.map((item) => <Card item={item} key={item._id} />)}
       </ul>
     </div>
   );
