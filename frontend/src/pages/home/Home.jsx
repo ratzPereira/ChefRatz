@@ -3,6 +3,8 @@ import CategoryWrapper from "../category/CategoryWrapper.jsx";
 import FeaturedSection from "./FeaturedSection.jsx";
 import LatestRecipe from "./LatestRecipe.jsx";
 import NewsLetter from "./NewsLetter.jsx";
+import AboutSection from "./AboutSection.jsx";
+import Footer from "../../components/Footer.jsx";
 
 const Home = () => {
   return (
@@ -13,7 +15,9 @@ const Home = () => {
       </div>
       <FeaturedSection />
       <LatestRecipe />
+      <AboutSection />
       <NewsLetter />
+      <Footer />
     </div>
   );
 };
