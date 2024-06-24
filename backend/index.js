@@ -20,7 +20,10 @@ mongoose
 
     // Rotas
     const itemRoute = require("./src/routes/ItemRoute");
+    const categotyRoute = require("./src/routes/CategoryRoute");
+
     app.use("/api", itemRoute);
+    app.use("/api", categotyRoute);
 
     app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`);
