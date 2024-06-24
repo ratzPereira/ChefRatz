@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 import CategoryPage from "./pages/category/CategoryPage.jsx";
 import Search from "./pages/Search.jsx";
 import SingleProduct from "./pages/products/SingleProduct.jsx";
+import Recepies from "./pages/products/Recepies.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             }
             throw new Error("Failed to load data");
           }),
+      },
+      {
+        path: "/Recipes",
+        element: <Recepies />,
       },
     ],
   },

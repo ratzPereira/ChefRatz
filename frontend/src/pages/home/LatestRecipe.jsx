@@ -33,7 +33,7 @@ const LatestRecipe = () => {
         )}
       </div>
       <div className="sm:w-64 mx-auto mt-16">
-        <Link to="/recepies">
+        <Link to="/Recipes">
           <button
             className="hover:bg-btnColor text-secondary px-8 py-4 hover:text-white w-full transition ease-in duration-200
              text-center text-base font-semibold border border-[#9c702a] focus:outline-none rounded-lg"
