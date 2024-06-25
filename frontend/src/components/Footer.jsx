@@ -128,7 +128,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-8 text-base leading-6 text-center text-gray-400">
-          © 2021 SomeCompany, Inc. All rights reserved.
+          © 2024 Jonny D'Enveloper, Inc. All rights reserved.
         </p>
       </div>
     </div>
