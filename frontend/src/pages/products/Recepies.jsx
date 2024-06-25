@@ -9,7 +9,9 @@ const Recepies = () => {
   useEffect(() => {
     const getLatestItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/all-items");
+        const response = await axios.get(
+          "https://chef-ratz.vercel.app/api/all-items",
+        );
         setItems(response.data);
       } catch (error) {
         console.error("Error fetching latest recipes: ", error);

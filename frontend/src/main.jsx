@@ -35,12 +35,14 @@ const router = createBrowserRouter([
         path: "/items/:id",
         element: <SingleProduct />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/items/${params.id}`).then((res) => {
-            if (res.ok) {
-              return res.json();
-            }
-            throw new Error("Failed to load data");
-          }),
+          fetch(`https://chef-ratz.vercel.app/api/items/${params.id}`).then(
+            (res) => {
+              if (res.ok) {
+                return res.json();
+              }
+              throw new Error("Failed to load data");
+            },
+          ),
       },
       {
         path: "/Recipes",

@@ -24,9 +24,12 @@ const Search = () => {
       setLoading(true);
       try {
         console.log(query);
-        const response = await axios.get(`http://localhost:5000/api/items`, {
-          params: { query },
-        });
+        const response = await axios.get(
+          `https://chef-ratz.vercel.app/api/items`,
+          {
+            params: { query },
+          },
+        );
         setResults(response.data);
       } catch (error) {
         setError(error || "An unexpected error occurred");
