@@ -10,6 +10,8 @@ import Search from "./pages/Search.jsx";
 import SingleProduct from "./pages/products/SingleProduct.jsx";
 import Recepies from "./pages/products/Recepies.jsx";
 import ResourcePage from "./pages/resourcePage/ResourcePage.jsx";
+import AboutPage from "./pages/about/AboutPage.jsx";
+import ContactPage from "./pages/contact/ContactPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
       {
         path: "/Resources",
         element: <ResourcePage />,
+      },
+      {
+        path: "/About",
+        element: <AboutPage />,
+      },
+      {
+        path: "/Contact",
+        element: <ContactPage />,
       },
     ],
   },
